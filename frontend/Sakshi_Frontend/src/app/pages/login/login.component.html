@@ -1,0 +1,30 @@
+<div class="bootstrap-wrapper">
+    <div class="container" style="background-color: white;">
+        <div class="row mt15 pb20">
+            <div class="col-md-6 offset-md-3">
+                <h1 class="text-center pb20 pt20">Login Page</h1>
+
+                <form (ngSubmit)="onSubmit()">
+                    <!-- {{loginData | json}} -->
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Username</mat-label>
+                        <input name="uname" matInput placeholder="Username" required [(ngModel)]="user.uname" />
+                    </mat-form-field>
+
+
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Password</mat-label>
+                        <input name="password" matInput placeholder="Password" type="password" required
+                            [(ngModel)]="user.password">
+                    </mat-form-field>
+
+                    <div class="container text-center">
+                        <button type="submit" mat-raised-button color="primary">Login</button>
+                        <!-- <button class="ml20" mat-raised-button color="accent">Reset</button> -->
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
